@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+.input-form {
+     width: 75%;
+     padding: 5px;
+     margin: auto;
+     position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+input, select {
+    display: block;
+    float: left;
+    width: 80%;
+    background-color: rgba(80, 66, 66, 0.11);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+input {
+    border-style: solid none none solid;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+.flex-container-button {
+    display: flex;
+    clear: both;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 10px 15px;
+    width: auto;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#submit {
+    margin-right: 10px;
+    background-color: green;
+    color: white;
+}
+
+#reset, #delete {
+    background-color: red;
+    color: white;
+}
+
+#cat {
+    width: 100px;
+    height: 100px;
+    margin-left: 25%;
+    display: block;
+    /* visibility: hidden; */
+}
+
+/* input[type="file"] + div {
+    display: block !important;
+    visibility: visible !important;
+} */
+
+.link {
+    position: absolute;
+    right: 5px;
+    margin-top: 3em;
+}
+
+.container-grid {
+    /* width: 100%; */
+    clear: both;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-gap: 1px;
+    border: 1px solid black;
+    padding: 5px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px;
+}
+
+.container-grid > div {
+    background-color: rgb(243, 237, 237);
+    padding: 10px;
+}
+
+.container-grid > div:nth-child(even) {
+    background-color: white;
+}
+
+.container-grid > div > button {
+    margin: 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > img {
+    max-width: 350px;
+    max-height: 300px;
+
+}
+
+
+#searchName, #newPlaceBt {
+    margin-left: 20px;
+}
+
+#update {
+    background-color: blue;
+    color: white;
+}
+
+#newPlaceBt {
+    background-color: rgb(67, 67, 129);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-grid > .flex-container.hd {
+    background-color: black;
+    color: white;
+}

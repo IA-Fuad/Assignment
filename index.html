@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="input-form">
+            <div>
+                <h2>Add a new Tourist Place</h2>
+            </div>
+
+            <form action="information.html">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="name" />
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" name="" id="address" />
+                </div>
+                <div>
+                    <label for="rating">Rating</label>
+                    <input type="number" name="" id="rating" min="1" max="5" />
+                </div>
+                <div>
+                    <label for="type">Type</label>
+                    <select name="type" id="type">
+                        <option value="Beach">Beach</option>
+                        <option value="Hills">Hills</option>
+                        <option value="Fountain">Fountain</option>
+                        <option value="Landmark">Landmark</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="picture">Picture</label>
+                    <input type="file" name="" id="picture" />
+                    <div>
+                        <img id="cat" src="cat.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="flex-container-button">
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="reset" id="reset">Reset</button>
+                </div>
+            </form>
+            <div>
+                <a href="information.html" class="link"
+                    >Back to Tourist Place List</a
+                >
+            </div>
+        </div>
+    </body>
+</html>
