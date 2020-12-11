@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.input-form {
+#INPUT-FORM {
      width: 75%;
      padding: 5px;
      margin: auto;
@@ -57,41 +57,45 @@ button:hover {
     cursor: pointer;
 }
 
-#submit {
+#SUBMIT {
     margin-right: 10px;
     background-color: green;
     color: white;
 }
 
-#reset, #delete {
+#RESET, .delete {
     background-color: red;
     color: white;
 }
 
-#cat {
-    width: 100px;
-    height: 100px;
+#UP-PIC {
+    max-width: 250px;
+    max-height: 250px;
     margin-left: 25%;
-    display: block;
-    /* visibility: hidden; */
+    display: none;
 }
 
-/* input[type="file"] + div {
-    display: block !important;
-    visibility: visible !important;
-} */
 
-.link {
+#BACK {
     position: absolute;
     right: 5px;
     margin-top: 3em;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    color: blue;
+    padding: 0px;
+}
+
+
+.list-page {
+    display: none;
 }
 
 .container-grid {
-    /* width: 100%; */
     clear: both;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 1.3fr 1.5fr 1.2fr 0.8fr 1.5fr 1fr;
     grid-gap: 1px;
     border: 1px solid black;
     padding: 5px;
@@ -121,22 +125,21 @@ button:hover {
 }
 
 .flex-container > img {
-    max-width: 350px;
-    max-height: 300px;
-
+    max-width: 300px;
+    max-height: 250px;
 }
 
 
-#searchName, #newPlaceBt {
-    margin-left: 20px;
+.search, #NEW-PLACE-BT {
+    margin-left: 30px;
 }
 
-#update {
+.update {
     background-color: blue;
     color: white;
 }
 
-#newPlaceBt {
+#NEW-PLACE-BT {
     background-color: rgb(67, 67, 129);
     color: white;
     text-decoration: none;
@@ -151,3 +154,54 @@ button:hover {
     background-color: black;
     color: white;
 }
+
+
+.sort-arrow {
+    /* height: 80px; */
+    position: relative;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-left: 20px;
+
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    border-color: white;
+    /* margin-bottom: -10px; */
+    position: absolute;
+    top: 0;
+}
+
+.up:hover, .down:hover {
+    cursor: pointer;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-color: white;
+    /* margin-top: -20px; */
+    position: absolute;
+    bottom: 0;
+}
+
+.input-field {
+    clear: both;
+}
+
+.req {
+    float: right;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    color: red;
+    display: none;
+}
+
+

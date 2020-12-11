@@ -7,51 +7,93 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="input-form">
+        <div id="INPUT-FORM">
             <div>
-                <h2>Add a new Tourist Place</h2>
+                <h2 id="title">Add a new Tourist Place</h2>
             </div>
 
-            <form action="information.html">
+            <div class="input-field">
+                <label for="name">Name</label>
+                <input type="text" name="" id="NAME" />
+                <p class="req r-name">this field is required</p>
+            </div>
+            <div class="input-field">
+                <label for="address">Address</label>
+                <input type="text" name="" id="ADDRESS" />
+                <p class="req r-address">this field is required</p>
+            </div>
+            <div class="input-field">
+                <label for="rating">Rating</label>
+                <input type="number" name="" id="RATING" min="1" max="5" />
+                <p class="req r-rating">this field is required</p>
+            </div>
+            <div class="input-field">
+                <label for="type">Type</label>
+                <select name="type" id="TYPE">
+                    <option value="Beach">Beach</option>
+                    <option value="Hills">Hills</option>
+                    <option value="Fountain">Fountain</option>
+                    <option value="Landmark">Landmark</option>
+                </select>
+                <p class="req r-type">this field is required</p>
+            </div>
+            <div class="input-field">
+                <label for="picture">Picture</label>
+                <input type="file" name="" id="PICTURE" />
                 <div>
-                    <label for="name">Name</label>
-                    <input type="text" name="" id="name" />
+                    <img id="UP-PIC" alt="" />
                 </div>
-                <div>
-                    <label for="address">Address</label>
-                    <input type="text" name="" id="address" />
-                </div>
-                <div>
-                    <label for="rating">Rating</label>
-                    <input type="number" name="" id="rating" min="1" max="5" />
-                </div>
-                <div>
-                    <label for="type">Type</label>
-                    <select name="type" id="type">
-                        <option value="Beach">Beach</option>
-                        <option value="Hills">Hills</option>
-                        <option value="Fountain">Fountain</option>
-                        <option value="Landmark">Landmark</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="picture">Picture</label>
-                    <input type="file" name="" id="picture" />
-                    <div>
-                        <img id="cat" src="cat.png" alt="" />
+                <p class="req r-picture">this field is required</p>
+            </div>
+
+            <div class="flex-container-button">
+                <button type="submit" id="SUBMIT">Submit</button>
+                <button type="reset" id="RESET">Reset</button>
+            </div>
+            <div>
+                <button id="BACK">Back to Tourist Place List</button>
+            </div>
+        </div>
+
+        <!-- List Page -->
+
+        <div class="list-page">
+            <div class="search">
+                <input
+                    type="text"
+                    name=""
+                    id="SEARCH-NAME"
+                    placeholder="Enter name to search"
+                />
+            </div>
+            <div class="container-grid">
+                <div class="flex-container hd">
+                    <h3>NAME</h3>
+                    <div class="sort-arrow">
+                        <p><i class="arrow up"></i></p>
+                        <p><i class="arrow down"></i></p>
                     </div>
                 </div>
-
-                <div class="flex-container-button">
-                    <button type="submit" id="submit">Submit</button>
-                    <button type="reset" id="reset">Reset</button>
+                <div class="flex-container hd">
+                    <h3>ADDRESS</h3>
                 </div>
-            </form>
+                <div class="flex-container hd">
+                    <h3>TYPE</h3>
+                </div>
+                <div class="flex-container hd">
+                    <h3>RATING</h3>
+                </div>
+                <div class="flex-container hd">
+                    <h3>PICTURE</h3>
+                </div>
+                <div class="flex-container hd">
+                    <h3>ACTION</h3>
+                </div>
+            </div>
             <div>
-                <a href="information.html" class="link"
-                    >Back to Tourist Place List</a
-                >
+                <button id="NEW-PLACE-BT">Create New Tourist Place</button>
             </div>
         </div>
     </body>
+    <script src="code.js"></script>
 </html>
