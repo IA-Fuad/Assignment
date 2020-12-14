@@ -167,10 +167,10 @@ function populateListPage() {
     deleteAllChild(container);
     indexOfInfos.clear();
 
-    for (let i = 0; i < allInfo.length; i++) {
-        indexOfInfos.set(allInfo[i].infoClass, i);
-        createInfoElements(container, allInfo[i]);
-    }
+    $.map(allInfo, function(e, i) {
+        indexOfInfos.set(e.infoClass, i);
+        createInfoElements(container, e);
+    });
 }
 
 function createInfoElements(container, information) {
@@ -200,19 +200,18 @@ function updateInfo() {
     address.val(info.address);
     rating.val(info.rating);
 
-    for (let i = 0; i < type[0].options.length; i++) {
-        if (type[0].options[i].value === info.type) {
+    $.map(type[0].options, function(e, i) {
+        if (e.value === info.type) {
             type.prop("selectedIndex", i);
-            break;
+            return;
         }
-    }
+    });
 
-    for (let i = 0; i < country[0].options.length; i++) {
-        if (country[0].options[i].value === info.country) {
+    $.map(country[0].options, function(e, i) {
+        if (e.value === info.country) {
             country.prop("selectedIndex", i);
-            break;
         }
-    }
+    });
 
     upPic.attr("src", info.picture);
 
@@ -243,11 +242,12 @@ function searchName() {
     let container = $(".container-grid");
     deleteAllChild(container);
 
-    for (let i = 0; i < allInfo.length; i++) {
-        if (allInfo[i].name.startsWith(searchWord)) {
-            createInfoElements(container, allInfo[i]);
-        }
-    }
+    let matches = allInfo.filter(function(e) {
+        return e.name.includes(searchWord);
+    });
+    (matches).forEach(element => {
+        createInfoElements(container, element);
+    });
 }
 
 function sortByName(x, y) {
