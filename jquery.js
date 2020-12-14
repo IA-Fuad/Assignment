@@ -41,8 +41,7 @@ $(document).ready(function() {
     });
     
     $("#PICTURE").change(function() {
-        upPic.show();
-        upPic.attr("src", URL.createObjectURL(picture[0].files[0]));
+        upPic.show().attr("src", URL.createObjectURL(picture[0].files[0]));
     });
 
     $("#SEARCH-NAME").keydown(function(e) {
@@ -110,8 +109,7 @@ function checkInValidity() {
 
         if (name.val() === "") {
             console.log(name.val())
-            $(".r-name").text("this field is required");
-            $(".r-name").show();
+            $(".r-name").text("this field is required").show();
             flag = true;
         }
         else {
@@ -120,8 +118,7 @@ function checkInValidity() {
                     continue;
                 }
                 if (allInfo[i].name === name.val()) {
-                    $(".r-name").text("this name already exist");
-                    $(".r-name").show();
+                    $(".r-name").text("this name already exist").show();
                     flag = true;
                 }
             }
