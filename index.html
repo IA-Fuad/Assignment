@@ -9,26 +9,26 @@
     <body>
         <div id="INPUT-FORM">
             <div>
-                <h2 id="title">Add a new Tourist Place</h2>
+                <h2 id="TITLE">Add a new Tourist Place</h2>
             </div>
 
             <div class="input-field">
-                <label for="name">Name</label>
+                <label for="NAME">Name</label>
                 <input type="text" name="" id="NAME" />
                 <p class="req r-name">this field is required</p>
             </div>
             <div class="input-field">
-                <label for="address">Address</label>
+                <label for="ADDRESS">Address</label>
                 <input type="text" name="" id="ADDRESS" />
                 <p class="req r-address">this field is required</p>
             </div>
             <div class="input-field">
-                <label for="rating">Rating</label>
+                <label for="RATING">Rating</label>
                 <input type="number" name="" id="RATING" min="1" max="5" />
                 <p class="req r-rating">this field is required</p>
             </div>
             <div class="input-field">
-                <label for="type">Type</label>
+                <label for="TYPE">Type</label>
                 <select name="type" id="TYPE">
                     <option value="Beach">Beach</option>
                     <option value="Hills">Hills</option>
@@ -36,6 +36,16 @@
                     <option value="Landmark">Landmark</option>
                 </select>
                 <p class="req r-type">this field is required</p>
+            </div>
+            <div class="input-field">
+                <label for="COUNTRY">Country</label>
+                <select name="type" id="COUNTRY">
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="India">India</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="USA">USA</option>
+                </select>
+                <p class="req r-country">this field is required</p>
             </div>
             <div class="input-field">
                 <label for="picture">Picture</label>
@@ -57,7 +67,7 @@
 
         <!-- List Page -->
 
-        <div class="list-page">
+        <div id="LIST-PAGE">
             <div class="search">
                 <input
                     type="text"
@@ -81,6 +91,9 @@
                     <h3>TYPE</h3>
                 </div>
                 <div class="flex-container hd">
+                    <h3>COUNTRY</h3>
+                </div>
+                <div class="flex-container hd">
                     <h3>RATING</h3>
                 </div>
                 <div class="flex-container hd">
@@ -95,5 +108,7 @@
             </div>
         </div>
     </body>
-    <script src="code.js"></script>
+    <script src="/jquery-3.5.1.js"></script>
+    <script src="/jquery.js"></script>
+    <!-- <script src="code.js"></script> -->
 </html>
